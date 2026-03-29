@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/summary")
-@CrossOrigin(origins = "*")
+/*@CrossOrigin(origins = "*")*/
 public class SummaryController {
 
     @Autowired
