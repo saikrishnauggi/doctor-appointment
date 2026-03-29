@@ -14,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/appointments")
-@CrossOrigin(origins = "*")
+/*@CrossOrigin(origins = "*")*/
 public class AppointmentController {
 
     @Autowired

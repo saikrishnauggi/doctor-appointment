@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom'; 
 
 import SpecialtiesPage from './pages/SpecialtiesPage';
 import DoctorsPage from './pages/DoctorsPage';
@@ -23,15 +23,15 @@ function Navbar() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <> {/* Replaced BrowserRouter with a Fragment */}
       <Navbar />
       <Routes>
-        <Route path="/"                 element={<SpecialtiesPage />} />
-        <Route path="/doctors"          element={<DoctorsPage />} />
-        <Route path="/book/:doctorId"   element={<BookingPage />} />
-        <Route path="/my-appointments"  element={<MyAppointmentsPage />} />
-        <Route path="/summary"          element={<SummaryPage />} />
+        <Route path="/" element={<SpecialtiesPage />} />
+        <Route path="/doctors" element={<DoctorsPage />} />
+        <Route path="/book/:doctorId" element={<BookingPage />} />
+        <Route path="/my-appointments" element={<MyAppointmentsPage />} />
+        <Route path="/summary" element={<SummaryPage />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
